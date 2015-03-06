@@ -37,8 +37,9 @@ namespace Zilean
 
 
             Menu = new Menu(Player.ChampionName, Player.ChampionName, true);
-            Menu orbwalkerMenu = Menu.AddSubMenu(new Menu("Orbwalker", "Orbwalker"));
-            Orbwalker = new Orbwalking.Orbwalker(orbwalkerMenu);
+            Menu orbwalkerMenu = new Menu("Orbwalker", "Orbwalker");
+            Orbwalker = new Orbwalking.Orbwalker(orbwalkerMenu); 
+            Menu.AddSubMenu(orbwalkerMenu);
             Menu ts = Menu.AddSubMenu(new Menu("Target Selector", "Target Selector")); ;
             TargetSelector.AddToMenu(ts);
 
