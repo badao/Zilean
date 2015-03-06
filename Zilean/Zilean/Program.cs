@@ -88,7 +88,11 @@ namespace Zilean
                 var target = TargetSelector.GetTarget(920, TargetSelector.DamageType.Magical);
                 float x = target.MoveSpeed;
                 float y = x*500/1000;
-                if (target != null)
+                if (target == null)
+                {
+                    return;
+                }
+                else
                 {
                     var t = Prediction.GetPrediction(target, 300).CastPosition;
                     
@@ -129,7 +133,11 @@ namespace Zilean
                 var target = TargetSelector.GetTarget(920, TargetSelector.DamageType.Magical);
                 float x = target.MoveSpeed;
                 float y = x * 500 / 1000;
-                if (target != null)
+                if (target == null)
+                {
+                    return;
+                }
+                else
                 {
                     var t = Prediction.GetPrediction(target, 300).CastPosition;
 
