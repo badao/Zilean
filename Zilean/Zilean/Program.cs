@@ -59,7 +59,7 @@ namespace Zilean
 
             //Drawing.OnDraw += Drawing_OnDraw;
 
-            Game.OnUpdate += Game_OnGameUpdate;
+            Game.OnGameUpdate += Game_OnGameUpdate;
 
 
             Game.PrintChat("Welcome to ZileanWorld");
