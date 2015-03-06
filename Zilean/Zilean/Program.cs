@@ -107,14 +107,12 @@ namespace Zilean
                     }
 
                 }
-                else
-                    return;
+                
 
             }
             if (W.IsReady())
             {
-                if (Q.IsReady(3000) || Q.IsReady())
-                    return;
+                if (!Q.IsReady(3000) ||! Q.IsReady())
                 W.Cast();
             }
             if (E.IsReady() && Menu.Item("Use E").GetValue<bool>())
@@ -151,8 +149,7 @@ namespace Zilean
                     }
 
                 }
-                else
-                    return;
+                
 
             }
         }
